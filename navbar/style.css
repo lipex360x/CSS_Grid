@@ -1,0 +1,43 @@
+body {
+  background: #3494e6;
+  height: 100vh;
+  overflow-y: hidden;
+  margin: 2rem;
+  font-family: sans-serif;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: max-content;
+  justify-content: center;
+  align-content: center;
+}
+
+.menu {
+  background: rgba(255,255,255, 0.6);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+
+  /* grid */
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.navigation {
+  list-style: none;
+  
+  /* grid */
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: end;
+  grid-gap: 1.5rem;
+}
+
