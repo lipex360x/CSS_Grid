@@ -20,53 +20,86 @@
     }
 
     .container {
+      height: 500px;
+      background: rgba(0,0,0,0.5);
+      padding: 1rem;
+      border-radius: 5px;
+
+      /* GRID */
       display: grid;
       grid-gap: 1rem;
       
-      grid-template-columns: 1fr 150px;
-      grid-template-rows: auto 500px auto;
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(2, auto);
 
-      grid-template-areas: 
-      'header header' 
-      'content nav' 
-      'footer footer';
+      /*** ALIGNS ***/
+
+      /* ## horizontal content align ## */
+      justify-content: stretch;
+      /* justify-content: center; */
+      /* justify-content: start; */
+      /* justify-content: end; */
+      /* justify-content: space-around; */
+      /* justify-content: space-between; */
+      /* justify-content: space-evenly; */
+
+      /* ## vertical content align ## */
+      align-content: stretch;
+      /* align-content: center; */
+      /* align-content: start; */
+      /* align-content: end; */
+      /* align-content: space-around; */
+      /* align-content: space-between; */
+      /* align-content: space-evenly; */
+
+      /* ## horizontal items align ## */
+      justify-items: stretch;
+      /* justify-items: start; */
+      /* justify-items: center; */
+      /* justify-items: end; */
+
+
+      /* ## vertical items align ## */
+      align-items: stretch;
+      /* align-items: start; */
+      /* align-items: center; */
+      /* align-items: end; */
     }
 
-    .header {
-      grid-area: header;
-    }
+    .item:nth-child(1) {
+      /* ## horizontal self align ## */
+      justify-self: stretch;
+      /* justify-self: start; */
+      /* justify-self: center; */
+      /* justify-self: end; */
 
-    .content {
-      grid-area: content
-    }
-
-    .nav {
-      grid-area: nav;
-    }
-
-    .footer {
-      grid-area: footer;
+      /* ## vertical self align ## */
+      align-self: stretch;
+      /* align-self: start; */
+      /* align-self: center; */
+      /* align-self: end; */
     }
 
   </style>
 </head>
 <body>
   <div class="container">
-    <main class="content item">
-      <h3>Conteúdo</h3>
-    </main>
+    <div class="item">
+      <h2>1</h2>
+    </div>
 
-    <footer class="footer item">
-      <h3>Rodapé</h3>
-    </footer>
-    
-    <header class="header item">
-      <h3>Cabeçalho</h3>
-    </header>
+    <div class="item">
+      <h2>2</h2>
+    </div>
 
-    <nav class="nav item">
-      <h3>Navegação</h3>
-    </nav>
+    <div class="item">
+      <h2>3</h2>
+    </div>
+
+    <div class="item">
+      <h2>4</h2>
+    </div>
+
   </div>
 </body>
 </html>
