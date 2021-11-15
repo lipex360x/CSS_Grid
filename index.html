@@ -23,13 +23,21 @@
     .container {
       display: grid;
       grid-gap: 1rem;
-      grid-auto-flow: column;
+      
+      grid-template-columns: repeat(10, 1fr);
+      grid-template-rows: 30px;
     }
 
   </style>
 </head>
 <body>
   <div class="container">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
     <div class="item"></div>
     <div class="item"></div>
     <div class="item"></div>
